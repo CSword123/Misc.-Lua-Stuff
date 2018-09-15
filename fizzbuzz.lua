@@ -5,22 +5,17 @@ local counter = 0;
 local f = "Fizz"; 
 local b = "Buzz";
 local fb = "FizzBuzz";
-local multCounter = 1;
-local hit1 = 3;
-local hit2 = 5;
 
 function fizzBuzz() 
 
   while (counter < 100) do
     counter = counter + 1;
   
-    if counter == hit1 then
+    if counter % 3 == 0 and counter % 15 ~= 0 then
       print(f);
-      hit1 = hit1 * (multCounter + 1);
-    elseif counter == hit2 then
+    elseif counter % 5 == 0 and counter % 15 ~= 0 then
       print(b);
-      hit2 = hit2 * (multCounter + 1);
-    elseif counter % 15 == 0 then
+    elseif  counter % 15 == 0 then
       print(fb);
     else
       print(counter);
